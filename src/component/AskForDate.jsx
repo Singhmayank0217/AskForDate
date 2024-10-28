@@ -21,8 +21,7 @@ export default function AskForDate() {
     gif2,
     gif3,
     gif4,
-     // Add a new GIF for "It's a date then!" here
-  ]; // Array of GIFs to cycle through
+  ]; 
 
   useEffect(() => {
     if (noCount > 1) {
@@ -63,7 +62,7 @@ export default function AskForDate() {
             value={name}
             onChange={(e) => setName(e.target.value)}
             placeholder="Enter your name"
-            className="mb-4 p-2 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-purple-400 transition duration-300"
+            className="mb-4 p-2 border flex border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-purple-400 transition duration-300"
           />
           <Button type="submit" className="w-full bg-purple-600 hover:bg-purple-700 text-white font-semibold rounded-lg p-2 transition duration-300">Submit</Button>
         </form>
@@ -89,7 +88,7 @@ export default function AskForDate() {
     );
   }
 
-  const currentGif = gifUrls[noCount % gifUrls.length]; // Cycle through GIFs based on noCount
+  const currentGif = gifUrls[noCount % gifUrls.length]; 
 
   return (
     <div className="flex flex-col items-center justify-center min-h-screen bg-gradient-to-r from-red-500 to-red-200">
@@ -98,7 +97,7 @@ export default function AskForDate() {
         <img
           src={currentGif}
           alt="Cute GIF"
-          className="mb-4 rounded-md shadow-md"
+          className="mb-4 rounded-md shadow-md lg:ml-24"
           width={300}
           height={200}
         />
