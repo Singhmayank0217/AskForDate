@@ -7,7 +7,7 @@ import gif1 from "../assests/gif1.gif"
 import gif2 from "../assests/gif3.gif"
 import gif3 from "../assests/gif4.gif"
 import gif4 from "../assests/date.gif"
-import musicFile from "../assests/AnathHu.mp3"; // Import your music file here
+import musicFile from "../assests/AnathHu.mp3"; 
 
 export default function AskForDate() {
   const [name, setName] = useState("");
@@ -16,7 +16,7 @@ export default function AskForDate() {
   const [yesPressed, setYesPressed] = useState(false);
   const [noButtonStyle, setNoButtonStyle] = useState({});
   
-  const audioRef = useRef(null); // Ref for the audio element
+  const audioRef = useRef(null); 
 
   const gifUrls = [
     gif1,
@@ -42,7 +42,7 @@ export default function AskForDate() {
   const handleNoClick = () => {
     setNoCount(noCount + 1);
     if (audioRef.current) {
-      audioRef.current.play(); // Play the music on "No" click
+      audioRef.current.play(); 
     }
   };
 
@@ -102,7 +102,8 @@ export default function AskForDate() {
         <img
           src={currentGif}
           alt="Cute GIF"
-          className="mb-4 rounded-md shadow-md lg:ml-24"
+          style={{ marginLeft: "25px" }}
+          className="mb-4 rounded-md shadow-md lg:ml-24 "
           width={300}
           height={200}
         />
